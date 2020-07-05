@@ -214,6 +214,29 @@
   
 
   
+    <!-- APlayer 音乐播放器 -->
+    <div id="aplayer"></div>
+    <script defer src="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.js" ></script>
+<link  rel="stylesheet" href="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.css" />
+<script type="text/javascript">
+  var oldLoadAp = window.onload;
+  window.onload = function () {
+    oldLoadAp && oldLoadAp();
+
+    new APlayer({
+      container: document.getElementById('aplayer'),
+      fixed: true,
+      autoplay: 'false' === 'true',
+      loop: 'all',
+      order: 'random',
+      theme: '#b7daff',
+      preload: 'none',
+      audio: [{"name":"仮面ライダー平成ジェネレーションズ FOREVER メドレー (D.A. RE-BUILD MIX)","artist":"佐橋俊彦","url":"/songs/KamenRider.mp3","cover":"/img/pckm.png"},{"name":"Sailing Away（最美的期待）","artist":"南征北战","url":"/songs/Sailing Away nzbz.mp3","cover":"/img/zmdqd.png"}]
+    });
+  }
+</script>
+
+  
 
   
 
@@ -312,7 +335,7 @@
         '  ',
         "标签&nbsp;",
       ],
-      cursorChar: "~",
+      cursorChar: "ღ",
       typeSpeed: 70,
       loop: false,
     });
